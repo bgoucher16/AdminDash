@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+    font-family: 'Arimo', sans-serif;
+    --card-gap: 20px;
+    --sidebar-width: 350px;
+    --gray: gray;
+    --l-gray: rgb(61, 61, 61);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px dotted blue;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 4fr;
+    grid-template-rows: 1fr 5fr;
+    overflow-y: scroll;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+ul {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--card-gap);
+}
+
+li,
+.dashboard-title {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    color: #ccc;
+    background-color: var(--gray);
+}
+
+.sidebar {
+    font-size: 1.2em;
+    padding: var(--card-gap);
+    background-color: var(--l-gray);
+}
+
+.dashboard-title {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+}
+
+.dashboard-logo{
+    width:50px;
+    height:50px;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.header {
+    padding: var(--card-gap);
+    grid-column: 2;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 3fr var(--sidebar-width);
+    align-items: center;
+    padding-right: 250px;
+}
+
+.profile-name{
+    font-size: 2em;
+}
+
+.profile-image{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 250px
+}
+
+input,
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+    padding: var(--card-gap);
+    margin-right: 300px;
+}
+
+.content-border{
+    gap: var(--card-gap);
+}
+
+h3, .prof-image{
+    display: flex;
+    align-items: center;
+}
+
+.prof-image{
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.rightSidebar{
+    align-items: end;
+}
+
+img {
+    width:40px;
+    height:40px;
+    margin-right: 20px;
+}
+
+li,
+.notification > img:first-of-type {
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: var(---gray);
+}
+
+li:hover {
+    translate: 10px;
+    font-weight: bold;
+    color:white;
+    transition: 0.2s ease-in;
+}
+
+li:hover > img {
+    filter: invert(1);
+}
+
+p {
+    line-height: 1.3rem;
+}
+
+.option > img,
+.section > img:first-of-type {
+    filter: invert(0.7);
+}
